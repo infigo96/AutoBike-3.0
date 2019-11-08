@@ -1,0 +1,4 @@
+This is the original FPGA bitfile, which has been modify to be able to both RT and FPGA I/Os. 
+If the SPI communication is implemented on the FPGA you should make sure that the VI found in:
+Lång adress
+uses the correct FPGA bit file. 
