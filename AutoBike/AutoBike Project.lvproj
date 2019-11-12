@@ -95,7 +95,7 @@ AddOutputFilter chunkFilter
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
 		<Item Name="Controllers and typedef" Type="Folder">
-			<Item Name="FPGA ref typedef.ctl" Type="VI" URL="../Sub VIs for FPGA/FPGA ref typedef.ctl"/>
+			<Item Name="FPGA ref typedef.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/FPGA ref typedef.ctl"/>
 			<Item Name="Knob control.ctl" Type="VI" URL="../Controllers graphics/Knob control.ctl"/>
 			<Item Name="Yaw control.ctl" Type="VI" URL="../Controllers graphics/Yaw control.ctl"/>
 		</Item>
@@ -163,6 +163,7 @@ AddOutputFilter chunkFilter
 				<Property Name="NI.LV.FPGA.CompileConfigString" Type="Str">roboRIO/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSROBORIOFPGA_TARGET_FAMILYZYNQTARGET_TYPEFPGA</Property>
 				<Property Name="NI.LV.FPGA.Version" Type="Int">6</Property>
 				<Property Name="NI.SortType" Type="Int">3</Property>
+				<Property Name="niFpga_TopLevelVIID" Type="Path">/C/Users/Mind Control 1/Desktop/AutoBike-3.0/AutoBike/FPGA/FPGA Main.vi</Property>
 				<Property Name="Resource Name" Type="Str">RIO0</Property>
 				<Property Name="Target Class" Type="Str">roboRIO</Property>
 				<Property Name="Top-Level Timing Source" Type="Str">40 MHz Onboard Clock</Property>
@@ -2014,6 +2015,7 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="Main.vi" Type="VI" URL="../RealTime/Main.vi"/>
 		<Item Name="Shared resources RT.lvlib" Type="Library" URL="../Shared resoruces/Shared resources RT.lvlib"/>
+		<Item Name="test_main.vi" Type="VI" URL="../../../../Downloads/test_main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Calculate Time Constant.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/Calculate Time Constant.vi"/>
@@ -2098,6 +2100,7 @@ AddOutputFilter chunkFilter
 			</Item>
 			<Item Name="AutoBikeMainFPGAbitfile.lvbitx" Type="Document" URL="../FPGA/FPGA Bitfiles/AutoBikeMainFPGAbitfile.lvbitx"/>
 			<Item Name="AutoBikeProject_FPGATarget_AutoBikeFPGA_EwzLm8KNttI.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeProject_FPGATarget_AutoBikeFPGA_EwzLm8KNttI.lvbitx"/>
+			<Item Name="AutoBikeProject_FPGATarget_FPGAMain2_h8Gr9OS88Pk.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeProject_FPGATarget_FPGAMain2_h8Gr9OS88Pk.lvbitx"/>
 			<Item Name="AutoBikeProject_FPGATarget_FPGASteeringVali_0ktHJXMggMw.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeProject_FPGATarget_FPGASteeringVali_0ktHJXMggMw.lvbitx"/>
 			<Item Name="Brake.vi" Type="VI" URL="../Sub VIs for RT target/Brake controll/Brake.vi"/>
 			<Item Name="FPGAIMU_FPGATarget_FPGAIMURead_c-b2E2IVPMQ.lvbitx" Type="Document" URL="../RealTime/Sub VIs for RT target/IMU/FPGA Bitfiles/FPGAIMU_FPGATarget_FPGAIMURead_c-b2E2IVPMQ.lvbitx"/>
@@ -2111,6 +2114,7 @@ AddOutputFilter chunkFilter
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="YPR_SubVI_string.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/YPR_SubVI_string.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="BicycleStartup" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
