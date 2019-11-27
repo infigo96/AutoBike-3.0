@@ -4,12 +4,31 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">369131520</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Item Name="Position data" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Global,Real-Time Features</Property>
+		<Property Name="Global:EnableTimestamp" Type="Str">True</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="type" Type="Str">Network</Property>
+		<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
+		<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
+		<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
+		<Property Name="type" Type="Str">Global</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#'AA!!!"9!A!!!!!!(!!F!#1!$77&amp;X!!N!#1!&amp;5'FU9WA!#U!*!!23&lt;WRM!!!*1!I!!URB&gt;!!,1!I!"%RP&lt;G=!!!F!#A!$17RU!")!5!!'!!!!!1!#!!-!"!!&amp;!!%!"A!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+	</Item>
+	<Item Name="Remote Control Data" Type="Variable">
+		<Property Name="featurePacks" Type="Str">Global,Real-Time Features</Property>
+		<Property Name="Global:EnableTimestamp" Type="Str">True</Property>
+		<Property Name="Industrial:IsNetworkPublished" Type="Str">True</Property>
+		<Property Name="Network:UseBinding" Type="Str">False</Property>
+		<Property Name="Network:UseBuffering" Type="Str">False</Property>
+		<Property Name="numTypedefs" Type="UInt">1</Property>
+		<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
+		<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
+		<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
+		<Property Name="type" Type="Str">Global</Property>
+		<Property Name="typedefName1" Type="Str">Remote Control Cluster.ctl</Property>
+		<Property Name="typedefPath1" Type="PathRel">../../Typedef/Remote Control Cluster.ctl</Property>
+		<Property Name="typeDesc" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$:V1!!!"9!A!!!!!!+!!N!"A!%5'^U-1!!#U!'!!21&lt;X1S!!!,1!9!"&amp;"P&gt;$-!!!N!"A!%5'^U.!!!"E!B!5Q!"E!B!5A!%E"1!!)!"!!&amp;"V.X;82D;$%!%E"1!!)!"!!&amp;"V.X;82D;$)!%E"1!!)!"!!&amp;"V.X;82D;$-!31$R!!!!!!!!!!%;5G6N&lt;X2F)%.P&lt;H2S&lt;WQA1WRV=X2F=CZD&gt;'Q!*E"1!!=!!!!"!!)!!Q!'!!=!#!VJ&lt;H"V&gt;#"D&lt;(6T&gt;'6S!!%!#1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="Stop!" Type="Variable">
 		<Property Name="featurePacks" Type="Str">Global,Real-Time Features</Property>
