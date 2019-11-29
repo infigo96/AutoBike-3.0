@@ -18,5 +18,5 @@
 
 
 #FPGA Bitfiles
-*.lvbitx
+#*.lvbitx
 
