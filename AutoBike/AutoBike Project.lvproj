@@ -13,7 +13,6 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="bla.vi" Type="VI" URL="../../../../Downloads/bla.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
@@ -154,6 +153,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Steering system" Type="Folder"/>
 			</Item>
 		</Item>
+		<Item Name="angleSetpointFix.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/angleSetpointFix.vi"/>
 		<Item Name="Chassis" Type="roboRIO Chassis">
 			<Property Name="crio.ProgrammingMode" Type="Str">fpga</Property>
 			<Property Name="crio.ResourceID" Type="Str">RIO0</Property>
@@ -166,7 +166,6 @@ AddOutputFilter chunkFilter
 				<Property Name="NI.LV.FPGA.CompileConfigString" Type="Str">roboRIO/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSROBORIOFPGA_TARGET_FAMILYZYNQTARGET_TYPEFPGA</Property>
 				<Property Name="NI.LV.FPGA.Version" Type="Int">6</Property>
 				<Property Name="NI.SortType" Type="Int">3</Property>
-				<Property Name="niFpga_TopLevelVIID" Type="Path">/C/Users/Mind Control 1/Desktop/AutoBike-3.0/AutoBike/FPGA/FPGA Main.vi</Property>
 				<Property Name="Resource Name" Type="Str">RIO0</Property>
 				<Property Name="Target Class" Type="Str">roboRIO</Property>
 				<Property Name="Top-Level Timing Source" Type="Str">40 MHz Onboard Clock</Property>
@@ -1890,24 +1889,6 @@ AddOutputFilter chunkFilter
 						<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 						<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 					</Item>
-					<Item Name="Start Boolean.ctl" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/Utilities/Start Boolean.ctl"/>
-					<Item Name="Split HDC Bank1 DIO.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/MUXed IO/Split HDC Bank1 DIO.vi"/>
-					<Item Name="DIO 4-bit.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/DIO/DIO 4-bit.vi"/>
-					<Item Name="DIO 1-bit.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/DIO/DIO 1-bit.vi"/>
-					<Item Name="Join HDC Bank1 DIO.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/MUXed IO/Join HDC Bank1 DIO.vi"/>
-					<Item Name="SPI Master.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Master.vi"/>
-					<Item Name="SPI States.ctl" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI States.ctl"/>
-					<Item Name="SPI Frame Length.ctl" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Frame Length.ctl"/>
-					<Item Name="Rising Edge Trigger.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/Utilities/Rising Edge Trigger.vi"/>
-					<Item Name="SPI Split Control Lines.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Split Control Lines.vi"/>
-					<Item Name="SPI Clock Select.ctl" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Clock Select.ctl"/>
-					<Item Name="SPI Output Logic.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Output Logic.vi"/>
-					<Item Name="SPI Clock.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Clock.vi"/>
-					<Item Name="SPI State Controller Logic.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI State Controller Logic.vi"/>
-					<Item Name="SPI MOSI.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI MOSI.vi"/>
-					<Item Name="SPI MISO.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI MISO.vi"/>
-					<Item Name="SPI IRQ.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI IRQ.vi"/>
-					<Item Name="Falling Edge Trigger.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/Utilities/Falling Edge Trigger.vi"/>
 				</Item>
 				<Item Name="Build Specifications" Type="Build">
 					<Item Name="SteeringControlSimulation" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -2030,8 +2011,12 @@ AddOutputFilter chunkFilter
 		<Item Name="FPGA_ref.ctl" Type="VI" URL="../Typedef/FPGA_ref.ctl"/>
 		<Item Name="InitaliseODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/InitaliseODrive.vi"/>
 		<Item Name="Main.vi" Type="VI" URL="../RealTime/Main.vi"/>
+		<Item Name="PID Gains.ctl" Type="VI" URL="../../../../Downloads/PID Gains.ctl"/>
 		<Item Name="Shared resources RT.lvlib" Type="Library" URL="../Shared resoruces/Shared resources RT.lvlib"/>
 		<Item Name="test_main.vi" Type="VI" URL="../../test_main.vi"/>
+		<Item Name="ToSend.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/ToSend.vi"/>
+		<Item Name="usePID.ctl" Type="VI" URL="../../../../Downloads/usePID.ctl"/>
+		<Item Name="waitForODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/waitForODrive.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Acquire Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Acquire Semaphore.vi"/>
@@ -2042,6 +2027,14 @@ AddOutputFilter chunkFilter
 				<Item Name="Calculate Time Constant.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/Calculate Time Constant.vi"/>
 				<Item Name="Calculate TOP (Normal Mode).vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/Calculate TOP (Normal Mode).vi"/>
 				<Item Name="Calculate TOP (Phase Correct Mode).vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/Calculate TOP (Phase Correct Mode).vi"/>
+				<Item Name="CD Current Observer Corrector.vi" Type="VI" URL="/&lt;vilib&gt;/addons/Control Design/_Implementation/CD Current Observer Corrector.vi"/>
+				<Item Name="CD Current Observer Predictor.vi" Type="VI" URL="/&lt;vilib&gt;/addons/Control Design/_Implementation/CD Current Observer Predictor.vi"/>
+				<Item Name="CD Generic Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/CD Generic Error Handler.vi"/>
+				<Item Name="cd_Check Model for Current Observer Predictor.vi" Type="VI" URL="/&lt;vilib&gt;/addons/Control Design/_Implementation/Implementation subVI/cd_Check Model for Current Observer Predictor.vi"/>
+				<Item Name="cd_Check Model for Observer.vi" Type="VI" URL="/&lt;vilib&gt;/addons/Control Design/_Implementation/Implementation subVI/cd_Check Model for Observer.vi"/>
+				<Item Name="cd_Current Observer Correction Point-by-Point.vi" Type="VI" URL="/&lt;vilib&gt;/addons/Control Design/_Implementation/Implementation subVI/cd_Current Observer Correction Point-by-Point.vi"/>
+				<Item Name="cd_Current Observer Prediction Point-by-Point.vi" Type="VI" URL="/&lt;vilib&gt;/addons/Control Design/_Implementation/Implementation subVI/cd_Current Observer Prediction Point-by-Point.vi"/>
+				<Item Name="cd_Verify Deterministic State-Space Model and x(0).vi" Type="VI" URL="/&lt;vilib&gt;/addons/Control Design/_Implementation/Implementation subVI/cd_Verify Deterministic State-Space Model and x(0).vi"/>
 				<Item Name="Check Parallel Gains.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/Check Parallel Gains.vi"/>
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 				<Item Name="Clock Calculation Parameters.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/Clock Calculation Parameters.ctl"/>
@@ -2057,11 +2050,16 @@ AddOutputFilter chunkFilter
 				<Item Name="DIO Channels List.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/DIO/typedefs/DIO Channels List.ctl"/>
 				<Item Name="DIO FPGA Reference.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/DIO/typedefs/DIO FPGA Reference.ctl"/>
 				<Item Name="DIO.lvlib" Type="Library" URL="/&lt;vilib&gt;/myRIO/Instrument Drivers/Onboard IO/DIO/DIO.lvlib"/>
+				<Item Name="Draw Multiple Lines.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Multiple Lines.vi"/>
+				<Item Name="Draw Text at Point.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Text at Point.vi"/>
+				<Item Name="Draw Text in Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Text in Rect.vi"/>
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
+				<Item Name="Find First Error.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find First Error.vi"/>
 				<Item Name="Find Mutex.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/Find Mutex.vi"/>
 				<Item Name="FPGA Ref Manager Action Enum.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/FPGA Ref Manager Action Enum.ctl"/>
 				<Item Name="FPGA Ref Manager.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/FPGA Ref Manager.vi"/>
 				<Item Name="Generic FPGA Reference.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/Generic FPGA Reference.ctl"/>
+				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
 				<Item Name="GetNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/GetNamedSemaphorePrefix.vi"/>
 				<Item Name="Hardware Version Enum.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/Hardware Version Enum.ctl"/>
 				<Item Name="IO Manager.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/IO Manager.vi"/>
@@ -2082,15 +2080,41 @@ AddOutputFilter chunkFilter
 				<Item Name="myRIO v1.0 Write Read SPI.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/SPI/vis/myRIO v1.0 Write Read SPI.vi"/>
 				<Item Name="Named Mutex.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/Named Mutex.ctl"/>
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
+				<Item Name="NI_AALBLAS.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBLAS.lvlib"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
+				<Item Name="NI_CD_LinSys State-Space.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_CD_LinSys State-Space.lvlib"/>
+				<Item Name="NI_CD_Model Delay.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Model Delay/NI_CD_Model Delay.lvlib"/>
+				<Item Name="NI_CD_Model Interconnection.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Model Interconnection/NI_CD_Model Interconnection.lvlib"/>
+				<Item Name="NI_CD_Model Type.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Model Conversions/NI_CD_Model Type.lvlib"/>
+				<Item Name="NI_CD_Model Viewer.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_CD_Model Viewer.lvlib"/>
+				<Item Name="NI_CD_MPC.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_MPC/NI_CD_MPC.lvlib"/>
+				<Item Name="NI_CD_State Feedback Control.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_State Feedback Control/NI_CD_State Feedback Control.lvlib"/>
+				<Item Name="NI_CD_State-Space Analysis.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_State-Space Analysis/NI_CD_State-Space Analysis.lvlib"/>
+				<Item Name="NI_CD_Stochastic Systems.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Stochastic Systems/NI_CD_Stochastic Systems.lvlib"/>
 				<Item Name="ni_emb.dll" Type="Document" URL="/&lt;vilib&gt;/ni_emb.dll"/>
 				<Item Name="NI_Fuzzy_Logic_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Fuzzy Logic/NI_Fuzzy_Logic_API.lvlib"/>
 				<Item Name="NI_Gmath.lvlib" Type="Library" URL="/&lt;vilib&gt;/gmath/NI_Gmath.lvlib"/>
+				<Item Name="NI_LinSys_Data Typedefs.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Model Construction/NI_LinSys_Data Typedefs.lvlib"/>
+				<Item Name="NI_LinSys_LinSys Conversion.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_LinSys_LinSys Conversion.lvlib"/>
+				<Item Name="NI_LinSys_LinSys Delay.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_LinSys_LinSys Delay.lvlib"/>
+				<Item Name="NI_LinSys_LinSys State-Space Shared.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_LinSys_LinSys State-Space Shared.lvlib"/>
+				<Item Name="NI_LinSys_LinSys TF.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_LinSys_LinSys TF.lvlib"/>
+				<Item Name="NI_LinSys_LinSys ZPK.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_LinSys_LinSys ZPK.lvlib"/>
+				<Item Name="NI_LinSys_Matrix AAL.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_LinSys_Matrix AAL.lvlib"/>
+				<Item Name="NI_LinSys_Matrix Math.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_LinSys_Matrix Math.lvlib"/>
+				<Item Name="NI_LinSys_Model Creation.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Model Construction/NI_LinSys_Model Creation.lvlib"/>
+				<Item Name="NI_LinSys_Model Information.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Model Construction/NI_LinSys_Model Information.lvlib"/>
+				<Item Name="NI_LinSys_Model Typedefs.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Model Construction/NI_LinSys_Model Typedefs.lvlib"/>
+				<Item Name="NI_LinSys_Polynomial Math.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_LinSys_Polynomial Math.lvlib"/>
+				<Item Name="NI_LinSys_Rendering.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_LinSys_Rendering.lvlib"/>
+				<Item Name="NI_LinSys_String Utilities.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Control Design/_Utility/NI_LinSys_String Utilities.lvlib"/>
+				<Item Name="NI_Matrix.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/Matrix/NI_Matrix.lvlib"/>
 				<Item Name="NI_PID__prctrl compat.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID__prctrl compat.lvlib"/>
 				<Item Name="NI_PID_pid.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID_pid.lvlib"/>
 				<Item Name="NI_Real-Time Target Support.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI_Real-Time Target Support.lvlib"/>
 				<Item Name="Not A Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Not A Semaphore.vi"/>
 				<Item Name="Obtain Semaphore Reference.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Obtain Semaphore Reference.vi"/>
+				<Item Name="PCT Pad String.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/PCT Pad String.vi"/>
 				<Item Name="PID Filter Coefficient Unit.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/PID Filter Coefficient Unit.ctl"/>
 				<Item Name="PID Gains Pattern.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/PID Gains Pattern.ctl"/>
 				<Item Name="PID Integral Derivative Unit.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/PID Integral Derivative Unit.ctl"/>
@@ -2131,7 +2155,10 @@ AddOutputFilter chunkFilter
 				<Item Name="roboRIO v1.0 Write Read SPI.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/roboRIO v1.0/SPI/vis/roboRIO v1.0 Write Read SPI.vi"/>
 				<Item Name="Semaphore RefNum" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Semaphore RefNum"/>
 				<Item Name="Semaphore Refnum Core.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Semaphore Refnum Core.ctl"/>
+				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
+				<Item Name="SIM MIMO State Space.ctl" Type="VI" URL="/&lt;vilib&gt;/Simulation/Shared/_Datatypes/SIM MIMO State Space.ctl"/>
 				<Item Name="SIM SISO Transfer Function.ctl" Type="VI" URL="/&lt;vilib&gt;/Simulation/Shared/_Datatypes/SIM SISO Transfer Function.ctl"/>
+				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="SPI Channels Enum.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/SPI/typedefs/SPI Channels Enum.ctl"/>
 				<Item Name="SPI Channels FPGA Reference.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/SPI/typedefs/SPI Channels FPGA Reference.ctl"/>
 				<Item Name="SPI Clock Phase.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/SPI/typedefs/SPI Clock Phase.ctl"/>
@@ -2165,11 +2192,14 @@ AddOutputFilter chunkFilter
 			<Item Name="FPGARS232_FPGATarget2_SERIAL_bmvIIZ4s+Jk.lvbitx" Type="Document" URL="../RealTime/Sub VIs for RT target/UWB/FPGA Bitfiles/FPGASERIAL/FPGARS232_FPGATarget2_SERIAL_bmvIIZ4s+Jk.lvbitx"/>
 			<Item Name="FPGARS232_FPGATarget2_UARTcomm_o+derQAVBDA.lvbitx" Type="Document" URL="../Documents/Github/HT18/AutoBike version1/FPGA Bitfiles/UartComm/FPGARS232_FPGATarget2_UARTcomm_o+derQAVBDA.lvbitx"/>
 			<Item Name="Fuzzy Controller.vi" Type="VI" URL="../RealTime/Controller_Labview/Fuzzy controller/Fuzzy Controller.vi"/>
+			<Item Name="Generate Profile.vi" Type="VI" URL="../../../../Downloads/Generate Profile.vi"/>
 			<Item Name="IMUcalc Bias.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUcalc Bias.vi"/>
 			<Item Name="IMUconfig.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUconfig.vi"/>
 			<Item Name="IMUrollpitch.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUrollpitch.vi"/>
 			<Item Name="LLA_SubVI_string.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/LLA_SubVI_string.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
+			<Item Name="lvblas.dll" Type="Document" URL="/&lt;resource&gt;/lvblas.dll"/>
+			<Item Name="MPC_Bike.vi" Type="VI" URL="../../../../Downloads/MPC_Bike.vi"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
