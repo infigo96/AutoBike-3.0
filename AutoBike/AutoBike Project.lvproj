@@ -140,6 +140,7 @@ AddOutputFilter chunkFilter
 			<Item Name="CheckForStop.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/CheckForStop.vi"/>
 			<Item Name="Close Down.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Close Down.vi"/>
 			<Item Name="Initalise.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Initalise.vi"/>
+			<Item Name="ToSend.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/ToSend.vi"/>
 		</Item>
 		<Item Name="Validation" Type="Folder">
 			<Item Name="AutoBike project" Type="Folder">
@@ -2008,14 +2009,12 @@ AddOutputFilter chunkFilter
 				</Item>
 			</Item>
 		</Item>
+		<Item Name="encoder2kmh.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/encoder2kmh.vi"/>
 		<Item Name="FPGA_ref.ctl" Type="VI" URL="../Typedef/FPGA_ref.ctl"/>
 		<Item Name="InitaliseODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/InitaliseODrive.vi"/>
 		<Item Name="Main.vi" Type="VI" URL="../RealTime/Main.vi"/>
-		<Item Name="PID Gains.ctl" Type="VI" URL="../../../../Downloads/PID Gains.ctl"/>
 		<Item Name="Shared resources RT.lvlib" Type="Library" URL="../Shared resoruces/Shared resources RT.lvlib"/>
 		<Item Name="test_main.vi" Type="VI" URL="../../test_main.vi"/>
-		<Item Name="ToSend.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/ToSend.vi"/>
-		<Item Name="usePID.ctl" Type="VI" URL="../../../../Downloads/usePID.ctl"/>
 		<Item Name="waitForODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/waitForODrive.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -2204,11 +2203,13 @@ AddOutputFilter chunkFilter
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="OpenPipeline.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/OpenPipeline.vi"/>
+			<Item Name="PID Gains.ctl" Type="VI" URL="../../../../Downloads/PID Gains.ctl"/>
 			<Item Name="Read.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/Read.vi"/>
 			<Item Name="ResetFlags.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/ResetFlags.vi"/>
 			<Item Name="RT_wait.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/RT_wait.vi"/>
 			<Item Name="StartListening.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/StartListening.vi"/>
 			<Item Name="StopListening.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/StopListening.vi"/>
+			<Item Name="usePID.ctl" Type="VI" URL="../../../../Downloads/usePID.ctl"/>
 			<Item Name="Write.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/Write.vi"/>
 			<Item Name="YPR_SubVI_string.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/YPR_SubVI_string.vi"/>
 		</Item>
