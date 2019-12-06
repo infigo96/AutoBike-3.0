@@ -130,6 +130,9 @@ AddOutputFilter chunkFilter
 				<Item Name="Logging.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Logging/Logging.vi"/>
 				<Item Name="Write Error Log.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Logging/Write Error Log.vi"/>
 			</Item>
+			<Item Name="nRF24 Communication" Type="Folder" URL="../RealTime/Sub VIs for RT target/nRF24 Communication">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
 			<Item Name="UWB" Type="Folder">
 				<Item Name="UWB Extract Position.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Extract Position.vi"/>
 				<Item Name="UWB Serial Close.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Serial Close.vi"/>
@@ -140,7 +143,6 @@ AddOutputFilter chunkFilter
 			<Item Name="CheckForStop.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/CheckForStop.vi"/>
 			<Item Name="Close Down.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Close Down.vi"/>
 			<Item Name="Initalise.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Initalise.vi"/>
-			<Item Name="ToSend.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/ToSend.vi"/>
 		</Item>
 		<Item Name="Validation" Type="Folder">
 			<Item Name="AutoBike project" Type="Folder">
@@ -2017,6 +2019,9 @@ AddOutputFilter chunkFilter
 		<Item Name="test_main.vi" Type="VI" URL="../../test_main.vi"/>
 		<Item Name="waitForODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/waitForODrive.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="NI SPI IP FPGA.lvlib" Type="Library" URL="/&lt;userlib&gt;/_NI SPI IP/FPGA/Controllers/NI SPI IP FPGA.lvlib"/>
+			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Acquire Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Acquire Semaphore.vi"/>
 				<Item Name="AddNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/AddNamedSemaphorePrefix.vi"/>
@@ -2066,6 +2071,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Lock Mutex.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/Lock Mutex.vi"/>
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
 				<Item Name="lvpidtkt.dll" Type="Document" URL="/&lt;vilib&gt;/addons/control/pid/lvpidtkt.dll"/>
+				<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 				<Item Name="Mutex Collection.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/Mutex Collection.ctl"/>
 				<Item Name="myRIO Generic Hardware Reference.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/myRIO Generic Hardware Reference.ctl"/>
 				<Item Name="myRIO v1.0 Build Bitmask DIO.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/DIO/vis/myRIO v1.0 Build Bitmask DIO.vi"/>
@@ -2181,12 +2187,7 @@ AddOutputFilter chunkFilter
 			<Item Name="AutoBikeMainFPGAbitfile.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeMainFPGAbitfile.lvbitx"/>
 			<Item Name="AutoBikeProject_FPGATarget_AutoBikeFPGA_EwzLm8KNttI.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeProject_FPGATarget_AutoBikeFPGA_EwzLm8KNttI.lvbitx"/>
 			<Item Name="AutoBikeProject_FPGATarget_FPGASteeringVali_0ktHJXMggMw.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeProject_FPGATarget_FPGASteeringVali_0ktHJXMggMw.lvbitx"/>
-			<Item Name="Begin.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/Begin.vi"/>
 			<Item Name="Brake.vi" Type="VI" URL="../Sub VIs for RT target/Brake controll/Brake.vi"/>
-			<Item Name="Decoder.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/Decoder.vi"/>
-			<Item Name="DisableAA.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/DisableAA.vi"/>
-			<Item Name="FIFOEmpty.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/FIFOEmpty.vi"/>
-			<Item Name="FlushTxRx.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/FlushTxRx.vi"/>
 			<Item Name="FPGAIMU_FPGATarget_FPGAIMURead_c-b2E2IVPMQ.lvbitx" Type="Document" URL="../RealTime/Sub VIs for RT target/IMU/FPGA Bitfiles/FPGAIMU_FPGATarget_FPGAIMURead_c-b2E2IVPMQ.lvbitx"/>
 			<Item Name="FPGARS232_FPGATarget2_SERIAL_bmvIIZ4s+Jk.lvbitx" Type="Document" URL="../RealTime/Sub VIs for RT target/UWB/FPGA Bitfiles/FPGASERIAL/FPGARS232_FPGATarget2_SERIAL_bmvIIZ4s+Jk.lvbitx"/>
 			<Item Name="FPGARS232_FPGATarget2_UARTcomm_o+derQAVBDA.lvbitx" Type="Document" URL="../Documents/Github/HT18/AutoBike version1/FPGA Bitfiles/UartComm/FPGARS232_FPGATarget2_UARTcomm_o+derQAVBDA.lvbitx"/>
@@ -2202,15 +2203,9 @@ AddOutputFilter chunkFilter
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="OpenPipeline.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/OpenPipeline.vi"/>
 			<Item Name="PID Gains.ctl" Type="VI" URL="../../../../Downloads/PID Gains.ctl"/>
-			<Item Name="Read.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/Read.vi"/>
-			<Item Name="ResetFlags.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/ResetFlags.vi"/>
 			<Item Name="RT_wait.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/RT_wait.vi"/>
-			<Item Name="StartListening.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/StartListening.vi"/>
-			<Item Name="StopListening.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/StopListening.vi"/>
 			<Item Name="usePID.ctl" Type="VI" URL="../../../../Downloads/usePID.ctl"/>
-			<Item Name="Write.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/nRF24 Communication/Write.vi"/>
 			<Item Name="YPR_SubVI_string.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/YPR_SubVI_string.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
@@ -2231,7 +2226,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{049A4002-82CB-4C7C-8523-29F7C973DC23}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">38</Property>
+				<Property Name="Bld_version.build" Type="Int">39</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
@@ -2241,17 +2236,28 @@ AddOutputFilter chunkFilter
 				<Property Name="Destination[1].path" Type="Path">/home/lvuser/natinst/bin/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{D4AC07DE-B8A4-44D8-8591-D956A8F18796}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{E603023E-A6F8-4487-879F-34FBF0379C03}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/NI-roboRIO-030cbd6b/Controllers and typedef/Knob control.ctl</Property>
-				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[2].itemID" Type="Ref">/NI-roboRIO-030cbd6b/Main.vi</Property>
-				<Property Name="Source[2].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[2].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">3</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/NI-roboRIO-030cbd6b/test_main.vi</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[3].type" Type="Str">VI</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/NI-roboRIO-030cbd6b/Shared resources RT.lvlib</Property>
+				<Property Name="Source[4].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[4].type" Type="Str">Library</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/NI-roboRIO-030cbd6b/FPGA_ref.ctl</Property>
+				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[5].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">6</Property>
 				<Property Name="TgtF_companyName" Type="Str">mälardalenshögskola</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">BicycleStartup</Property>
 				<Property Name="TgtF_internalName" Type="Str">BicycleStartup</Property>
