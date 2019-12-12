@@ -21,12 +21,14 @@
 		<Property Name="Global:EnableTimestamp" Type="Str">True</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
-		<Property Name="numTypedefs" Type="UInt">0</Property>
+		<Property Name="numTypedefs" Type="UInt">1</Property>
 		<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 		<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 		<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
 		<Property Name="type" Type="Str">Global</Property>
-		<Property Name="typeDesc" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#'AA!!!"9!A!!!!!!(!!F!#1!$77&amp;X!!N!#1!&amp;5'FU9WA!#U!*!!23&lt;WRM!!!*1!I!!URB&gt;!!,1!I!"%RP&lt;G=!!!F!#A!$17RU!")!5!!'!!!!!1!#!!-!"!!&amp;!!%!"A!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		<Property Name="typedefName1" Type="Str">INS Data.ctl</Property>
+		<Property Name="typedefPath1" Type="PathRel">../../../LabView Navigation/INS Data.ctl</Property>
+		<Property Name="typeDesc" Type="Bin">&amp;A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%3$A%!!"9!A!!!!!!-!!F!#1!$77&amp;X!!N!#1!&amp;5'FU9WA!#U!*!!23&lt;WRM!!!*1!I!!URB&gt;!!,1!I!"%RP&lt;G=!!!F!#A!$17RU!!N!#A!&amp;4G^S&gt;'A!#U!+!!2&amp;98.U!!!,1!I!"%2P&gt;WY!!!N!#A!%5'^T61!!#U!+!!27:7R6!!!`!0%!!!!!!!!!!1R*4F-A2'&amp;U93ZD&gt;'Q!+E"1!!M!!!!"!!)!!Q!%!!5!"A!(!!A!#1!+#%F/5S"%982B!!!"!!M!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="Remote Control Data" Type="Variable">
 		<Property Name="featurePacks" Type="Str">Global,Real-Time Features</Property>
