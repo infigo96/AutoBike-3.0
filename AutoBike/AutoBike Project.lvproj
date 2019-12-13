@@ -172,7 +172,6 @@ AddOutputFilter chunkFilter
 				<Property Name="NI.LV.FPGA.CompileConfigString" Type="Str">roboRIO/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSROBORIOFPGA_TARGET_FAMILYZYNQTARGET_TYPEFPGA</Property>
 				<Property Name="NI.LV.FPGA.Version" Type="Int">6</Property>
 				<Property Name="NI.SortType" Type="Int">3</Property>
-				<Property Name="niFpga_TopLevelVIID" Type="Path">/C/Users/Mind Control 1/Desktop/AutoBike-3.0/AutoBike/FPGA/FPGA Main.vi</Property>
 				<Property Name="Resource Name" Type="Str">RIO0</Property>
 				<Property Name="Target Class" Type="Str">roboRIO</Property>
 				<Property Name="Top-Level Timing Source" Type="Str">40 MHz Onboard Clock</Property>
@@ -1900,6 +1899,24 @@ AddOutputFilter chunkFilter
 						<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 						<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 					</Item>
+					<Item Name="Start Boolean.ctl" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/Utilities/Start Boolean.ctl"/>
+					<Item Name="Split HDC Bank1 DIO.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/MUXed IO/Split HDC Bank1 DIO.vi"/>
+					<Item Name="DIO 4-bit.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/DIO/DIO 4-bit.vi"/>
+					<Item Name="DIO 1-bit.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/DIO/DIO 1-bit.vi"/>
+					<Item Name="Join HDC Bank1 DIO.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/MUXed IO/Join HDC Bank1 DIO.vi"/>
+					<Item Name="SPI Master.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Master.vi"/>
+					<Item Name="SPI States.ctl" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI States.ctl"/>
+					<Item Name="SPI Frame Length.ctl" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Frame Length.ctl"/>
+					<Item Name="Rising Edge Trigger.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/Utilities/Rising Edge Trigger.vi"/>
+					<Item Name="SPI Split Control Lines.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Split Control Lines.vi"/>
+					<Item Name="SPI Clock Select.ctl" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Clock Select.ctl"/>
+					<Item Name="SPI Output Logic.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Output Logic.vi"/>
+					<Item Name="SPI Clock.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI Clock.vi"/>
+					<Item Name="SPI State Controller Logic.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI State Controller Logic.vi"/>
+					<Item Name="SPI MOSI.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI MOSI.vi"/>
+					<Item Name="SPI MISO.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI MISO.vi"/>
+					<Item Name="SPI IRQ.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/SPI/SPI IRQ.vi"/>
+					<Item Name="Falling Edge Trigger.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2016/examples/roboRIO/Customized FPGA/Sub VIs/Utilities/Falling Edge Trigger.vi"/>
 				</Item>
 				<Item Name="Build Specifications" Type="Build">
 					<Item Name="SteeringControlSimulation" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -2044,8 +2061,6 @@ AddOutputFilter chunkFilter
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 				<Item Name="Clock Calculation Parameters.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/Clock Calculation Parameters.ctl"/>
 				<Item Name="Clock Settings.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/Clock Settings.ctl"/>
-				<Item Name="Close File+.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Close File+.vi"/>
-				<Item Name="compatReadText.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatReadText.vi"/>
 				<Item Name="Configuration Manager.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/Configuration Manager.vi"/>
 				<Item Name="Convert PID Gains (PD).vi" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/Convert PID Gains (PD).vi"/>
 				<Item Name="Convert PID Gains (PI).vi" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/Convert PID Gains (PI).vi"/>
@@ -2058,7 +2073,6 @@ AddOutputFilter chunkFilter
 				<Item Name="DIO FPGA Reference.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/DIO/typedefs/DIO FPGA Reference.ctl"/>
 				<Item Name="DIO.lvlib" Type="Library" URL="/&lt;vilib&gt;/myRIO/Instrument Drivers/Onboard IO/DIO/DIO.lvlib"/>
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
-				<Item Name="Find First Error.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find First Error.vi"/>
 				<Item Name="Find Mutex.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/Find Mutex.vi"/>
 				<Item Name="FPGA Ref Manager Action Enum.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/FPGA Ref Manager Action Enum.ctl"/>
 				<Item Name="FPGA Ref Manager.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/FPGA Ref Manager.vi"/>
@@ -2088,23 +2102,15 @@ AddOutputFilter chunkFilter
 				<Item Name="ni_emb.dll" Type="Document" URL="/&lt;vilib&gt;/ni_emb.dll"/>
 				<Item Name="NI_Fuzzy_Logic_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Fuzzy Logic/NI_Fuzzy_Logic_API.lvlib"/>
 				<Item Name="NI_Gmath.lvlib" Type="Library" URL="/&lt;vilib&gt;/gmath/NI_Gmath.lvlib"/>
-				<Item Name="NI_Matrix.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/Matrix/NI_Matrix.lvlib"/>
 				<Item Name="NI_PID__prctrl compat.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID__prctrl compat.lvlib"/>
 				<Item Name="NI_PID_pid.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID_pid.lvlib"/>
 				<Item Name="NI_Real-Time Target Support.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI_Real-Time Target Support.lvlib"/>
 				<Item Name="Not A Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Not A Semaphore.vi"/>
 				<Item Name="Obtain Semaphore Reference.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Obtain Semaphore Reference.vi"/>
-				<Item Name="Open File+.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Open File+.vi"/>
 				<Item Name="PID Filter Coefficient Unit.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/PID Filter Coefficient Unit.ctl"/>
 				<Item Name="PID Gains Pattern.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/PID Gains Pattern.ctl"/>
 				<Item Name="PID Integral Derivative Unit.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/PID Integral Derivative Unit.ctl"/>
 				<Item Name="PID Proportional Unit.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/PID Proportional Unit.ctl"/>
-				<Item Name="Read Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet (DBL).vi"/>
-				<Item Name="Read Delimited Spreadsheet (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet (I64).vi"/>
-				<Item Name="Read Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet (string).vi"/>
-				<Item Name="Read Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet.vi"/>
-				<Item Name="Read File+ (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read File+ (string).vi"/>
-				<Item Name="Read Lines From File (with error IO).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Lines From File (with error IO).vi"/>
 				<Item Name="Reentrant Mutex.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/Reentrant Mutex.ctl"/>
 				<Item Name="Ref Counter Action Enum.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/Ref Counter Action Enum.ctl"/>
 				<Item Name="Ref Counter.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/Ref Counter.vi"/>
@@ -2171,23 +2177,20 @@ AddOutputFilter chunkFilter
 			<Item Name="AutoBikeProject_FPGATarget_AutoBikeFPGA_EwzLm8KNttI.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeProject_FPGATarget_AutoBikeFPGA_EwzLm8KNttI.lvbitx"/>
 			<Item Name="AutoBikeProject_FPGATarget_FPGASteeringVali_0ktHJXMggMw.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeProject_FPGATarget_FPGASteeringVali_0ktHJXMggMw.lvbitx"/>
 			<Item Name="Brake.vi" Type="VI" URL="../Sub VIs for RT target/Brake controll/Brake.vi"/>
-			<Item Name="CoordToMeters.vi" Type="VI" URL="../../LabView Navigation/CoordToMeters.vi"/>
 			<Item Name="FPGAIMU_FPGATarget_FPGAIMURead_c-b2E2IVPMQ.lvbitx" Type="Document" URL="../RealTime/Sub VIs for RT target/IMU/FPGA Bitfiles/FPGAIMU_FPGATarget_FPGAIMURead_c-b2E2IVPMQ.lvbitx"/>
 			<Item Name="Fuzzy Controller.vi" Type="VI" URL="../RealTime/Controller_Labview/Fuzzy controller/Fuzzy Controller.vi"/>
 			<Item Name="IMUcalc Bias.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUcalc Bias.vi"/>
 			<Item Name="IMUconfig.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUconfig.vi"/>
 			<Item Name="IMUrollpitch.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUrollpitch.vi"/>
-			<Item Name="Kalman.vi" Type="VI" URL="../../LabView Navigation/Kalman.vi"/>
 			<Item Name="LLA_SubVI_string.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/LLA_SubVI_string.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="PathFollowingFinal.vi" Type="VI" URL="../../LabView Navigation/PathFollowingFinal.vi"/>
 			<Item Name="PID Gains.ctl" Type="VI" URL="../../../../Downloads/PID Gains.ctl"/>
+			<Item Name="ReadUncertainties.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/ReadUncertainties.vi"/>
+			<Item Name="ReadVelNed.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/ReadVelNed.vi"/>
 			<Item Name="RT_wait.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/RT_wait.vi"/>
-			<Item Name="TurnLogic.vi" Type="VI" URL="../../LabView Navigation/TurnLogic.vi"/>
-			<Item Name="UWB_data_extractor.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB_data_extractor.vi"/>
 			<Item Name="YPR_SubVI_string.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/YPR_SubVI_string.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
@@ -2208,7 +2211,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{049A4002-82CB-4C7C-8523-29F7C973DC23}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">48</Property>
+				<Property Name="Bld_version.build" Type="Int">51</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
