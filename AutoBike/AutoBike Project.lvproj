@@ -97,7 +97,6 @@ AddOutputFilter chunkFilter
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
 		<Item Name="Controllers and typedef" Type="Folder">
 			<Item Name="FPGA ref typedef.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/FPGA ref typedef.ctl"/>
-			<Item Name="INS Data.ctl" Type="VI" URL="../../LabView Navigation/INS Data.ctl"/>
 			<Item Name="Knob control.ctl" Type="VI" URL="../Controllers graphics/Knob control.ctl"/>
 			<Item Name="Remote Control Cluster.ctl" Type="VI" URL="../Typedef/Remote Control Cluster.ctl"/>
 			<Item Name="Yaw control.ctl" Type="VI" URL="../Controllers graphics/Yaw control.ctl"/>
@@ -121,11 +120,13 @@ AddOutputFilter chunkFilter
 			<Item Name="IMU" Type="Folder">
 				<Item Name="Extract Angles.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Extract Angles.vi"/>
 				<Item Name="InduceDisturbance.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/InduceDisturbance.vi"/>
+				<Item Name="LLA_SubVI_string.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/LLA_SubVI_string.vi"/>
+				<Item Name="Orientation measurements standalone.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Orientation measurements standalone.vi"/>
 				<Item Name="Orientation Measurements.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Orientation Measurements.vi"/>
 				<Item Name="Read_VN200.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Read_VN200.vi"/>
-				<Item Name="Serial Close IMU.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Serial Close IMU.vi"/>
-				<Item Name="Serial Init IMU.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Serial Init IMU.vi"/>
-				<Item Name="Serial Read IMU.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Serial Read IMU.vi"/>
+				<Item Name="ReadUncertainties.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/ReadUncertainties.vi"/>
+				<Item Name="ReadVelNed.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/ReadVelNed.vi"/>
+				<Item Name="YPR_SubVI_string.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/YPR_SubVI_string.vi"/>
 			</Item>
 			<Item Name="Logging" Type="Folder">
 				<Item Name="Create Log File.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Logging/Create Log File.vi"/>
@@ -133,19 +134,23 @@ AddOutputFilter chunkFilter
 				<Item Name="Logging.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Logging/Logging.vi"/>
 				<Item Name="Write Error Log.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Logging/Write Error Log.vi"/>
 			</Item>
+			<Item Name="Navigation" Type="Folder">
+				<Item Name="CoordToMeters.vi" Type="VI" URL="../../LabView Navigation/CoordToMeters.vi"/>
+				<Item Name="Kalman.vi" Type="VI" URL="../../LabView Navigation/Kalman.vi"/>
+				<Item Name="PathFollowingFinal.vi" Type="VI" URL="../../LabView Navigation/PathFollowingFinal.vi"/>
+				<Item Name="PlanPath.vi" Type="VI" URL="../../LabView Navigation/PlanPath.vi"/>
+				<Item Name="TurnLogic.vi" Type="VI" URL="../../LabView Navigation/TurnLogic.vi"/>
+			</Item>
 			<Item Name="nRF24 Communication" Type="Folder" URL="../RealTime/Sub VIs for RT target/nRF24 Communication">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
 			<Item Name="UWB" Type="Folder">
-				<Item Name="UWB Extract Position.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Extract Position.vi"/>
-				<Item Name="UWB Serial Close.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Serial Close.vi"/>
-				<Item Name="UWB Serial Init.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Serial Init.vi"/>
-				<Item Name="UWB Serial Read.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Serial Read.vi"/>
-				<Item Name="UWB Serial Write.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Serial Write.vi"/>
+				<Item Name="UWB_data_extractor.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB_data_extractor.vi"/>
 			</Item>
 			<Item Name="CheckForStop.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/CheckForStop.vi"/>
 			<Item Name="Close Down.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Close Down.vi"/>
 			<Item Name="Initalise.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Initalise.vi"/>
+			<Item Name="RT_wait.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/RT_wait.vi"/>
 		</Item>
 		<Item Name="Validation" Type="Folder">
 			<Item Name="AutoBike project" Type="Folder">
@@ -2050,7 +2055,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Convert PID Gains (PD).vi" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/Convert PID Gains (PD).vi"/>
 				<Item Name="Convert PID Gains (PI).vi" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/Convert PID Gains (PI).vi"/>
 				<Item Name="Convert PID Gains (PID).vi" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Private/Convert PID Gains (PID).vi"/>
-				<Item Name="Convert PID Gains.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/public/Convert PID Gains.vi"/>
+				<Item Name="Convert PID Gains.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/Analysis/host/Public/Convert PID Gains.vi"/>
 				<Item Name="DIO Bank Enum.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/DIO/typedefs/DIO Bank Enum.ctl"/>
 				<Item Name="DIO Bitmask to Channel Map.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/DIO/typedefs/DIO Bitmask to Channel Map.ctl"/>
 				<Item Name="DIO Channels Enum.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/myRIO v1.0/DIO/typedefs/DIO Channels Enum.ctl"/>
@@ -2171,24 +2176,22 @@ AddOutputFilter chunkFilter
 			<Item Name="AutoBikeProject_FPGATarget_AutoBikeFPGA_EwzLm8KNttI.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeProject_FPGATarget_AutoBikeFPGA_EwzLm8KNttI.lvbitx"/>
 			<Item Name="AutoBikeProject_FPGATarget_FPGASteeringVali_0ktHJXMggMw.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeProject_FPGATarget_FPGASteeringVali_0ktHJXMggMw.lvbitx"/>
 			<Item Name="Brake.vi" Type="VI" URL="../Sub VIs for RT target/Brake controll/Brake.vi"/>
-			<Item Name="CoordToMeters.vi" Type="VI" URL="../../LabView Navigation/CoordToMeters.vi"/>
 			<Item Name="FPGAIMU_FPGATarget_FPGAIMURead_c-b2E2IVPMQ.lvbitx" Type="Document" URL="../RealTime/Sub VIs for RT target/IMU/FPGA Bitfiles/FPGAIMU_FPGATarget_FPGAIMURead_c-b2E2IVPMQ.lvbitx"/>
 			<Item Name="Fuzzy Controller.vi" Type="VI" URL="../RealTime/Controller_Labview/Fuzzy controller/Fuzzy Controller.vi"/>
 			<Item Name="IMUcalc Bias.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUcalc Bias.vi"/>
 			<Item Name="IMUconfig.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUconfig.vi"/>
 			<Item Name="IMUrollpitch.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUrollpitch.vi"/>
-			<Item Name="Kalman.vi" Type="VI" URL="../../LabView Navigation/Kalman.vi"/>
-			<Item Name="LLA_SubVI_string.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/LLA_SubVI_string.vi"/>
+			<Item Name="INS Data.ctl" Type="VI" URL="../Typedef/INS Data.ctl"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="PathFollowingFinal.vi" Type="VI" URL="../../LabView Navigation/PathFollowingFinal.vi"/>
-			<Item Name="PID Gains.ctl" Type="VI" URL="../../../../Downloads/PID Gains.ctl"/>
-			<Item Name="RT_wait.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/RT_wait.vi"/>
-			<Item Name="TurnLogic.vi" Type="VI" URL="../../LabView Navigation/TurnLogic.vi"/>
-			<Item Name="UWB_data_extractor.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB_data_extractor.vi"/>
-			<Item Name="YPR_SubVI_string.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/YPR_SubVI_string.vi"/>
+			<Item Name="Serial Close IMU.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Serial Close IMU.vi"/>
+			<Item Name="Serial Init IMU.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Serial Init IMU.vi"/>
+			<Item Name="Serial Read IMU.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Serial Read IMU.vi"/>
+			<Item Name="UWB Extract Position.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Extract Position.vi"/>
+			<Item Name="UWB Serial Read.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Serial Read.vi"/>
+			<Item Name="UWB Serial Write.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Serial Write.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="BicycleStartup" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
@@ -2247,6 +2250,19 @@ AddOutputFilter chunkFilter
 				<Property Name="TgtF_productName" Type="Str">BicycleStartup</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{60EA9727-E5B2-4104-9AAA-9AE9CB3A4D18}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">startup.rtexe</Property>
+			</Item>
+			<Item Name="My Zip File" Type="Zip File">
+				<Property Name="Absolute[0]" Type="Bool">false</Property>
+				<Property Name="BuildName" Type="Str">My Zip File</Property>
+				<Property Name="Comments" Type="Str"></Property>
+				<Property Name="DestinationID[0]" Type="Str">{9D61A0C2-8418-4B21-8479-F3B009C84D8F}</Property>
+				<Property Name="DestinationItemCount" Type="Int">1</Property>
+				<Property Name="DestinationName[0]" Type="Str">Destination Directory</Property>
+				<Property Name="IncludedItemCount" Type="Int">1</Property>
+				<Property Name="IncludedItems[0]" Type="Ref">/NI-roboRIO-030cbd6b</Property>
+				<Property Name="IncludeProject" Type="Bool">true</Property>
+				<Property Name="Path[0]" Type="Path">../../builds/AutoBike Project/NI-roboRIO-030cbd6b/My Zip File/AutoBike Project.zip</Property>
+				<Property Name="ZipBase" Type="Str">NI_zipbasedefault</Property>
 			</Item>
 		</Item>
 	</Item>
