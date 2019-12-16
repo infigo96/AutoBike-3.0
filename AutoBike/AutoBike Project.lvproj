@@ -146,6 +146,7 @@ AddOutputFilter chunkFilter
 			</Item>
 			<Item Name="UWB" Type="Folder">
 				<Item Name="UWB_data_extractor.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB_data_extractor.vi"/>
+				<Item Name="XY2Heading.vi" Type="VI" URL="../../LabView Navigation/XY2Heading.vi"/>
 			</Item>
 			<Item Name="CheckForStop.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/CheckForStop.vi"/>
 			<Item Name="Close Down.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/Close Down.vi"/>
@@ -2034,7 +2035,9 @@ AddOutputFilter chunkFilter
 		<Item Name="waitForODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/waitForODrive.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
-				<Item Name="NI SPI IP FPGA.lvlib" Type="Library" URL="/&lt;userlib&gt;/_NI SPI IP/FPGA/Controllers/NI SPI IP FPGA.lvlib"/>
+				<Item Name="Slave Transfer Settings.ctl" Type="VI" URL="/&lt;userlib&gt;/_NI SPI IP/FPGA/Controllers/Public/Slave Transfer Settings.ctl"/>
+				<Item Name="Spi Master.vi" Type="VI" URL="/&lt;userlib&gt;/_NI SPI IP/FPGA/Controllers/Public/Spi Master.vi"/>
+				<Item Name="Transfer Settings.ctl" Type="VI" URL="/&lt;userlib&gt;/_NI SPI IP/FPGA/Controllers/Public/Transfer Settings.ctl"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Acquire Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Acquire Semaphore.vi"/>
@@ -2133,6 +2136,7 @@ AddOutputFilter chunkFilter
 				<Item Name="roboRIO v1.0 Connector List.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/roboRIO v1.0/Resource Manager/typedefs/roboRIO v1.0 Connector List.ctl"/>
 				<Item Name="roboRIO v1.0 Create Configuration List.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/roboRIO v1.0/Resource Manager/vis/roboRIO v1.0 Create Configuration List.vi"/>
 				<Item Name="roboRIO v1.0 DIO Channels Enum.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/roboRIO v1.0/DIO/typedefs/roboRIO v1.0 DIO Channels Enum.ctl"/>
+				<Item Name="roboRIO v1.0 FPGA.lvbitx" Type="Document" URL="/&lt;vilib&gt;/myRIO/FPGA/bitfiles/roboRIO v1.0 FPGA.lvbitx"/>
 				<Item Name="roboRIO v1.0 Open DIO.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/roboRIO v1.0/DIO/vis/roboRIO v1.0 Open DIO.vi"/>
 				<Item Name="roboRIO v1.0 Open SPI.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/roboRIO v1.0/SPI/vis/roboRIO v1.0 Open SPI.vi"/>
 				<Item Name="roboRIO v1.0 Open.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/roboRIO v1.0/roboRIO v1.0 Open.vi"/>
@@ -2211,7 +2215,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{049A4002-82CB-4C7C-8523-29F7C973DC23}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">48</Property>
+				<Property Name="Bld_version.build" Type="Int">49</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
