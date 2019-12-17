@@ -1918,6 +1918,24 @@ AddOutputFilter chunkFilter
 						<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 						<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 					</Item>
+					<Item Name="Start Boolean.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/Utilities/Start Boolean.ctl"/>
+					<Item Name="SPI Frame Length.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Frame Length.ctl"/>
+					<Item Name="SPI MISO.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI MISO.vi"/>
+					<Item Name="SPI MOSI.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI MOSI.vi"/>
+					<Item Name="SPI States.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI States.ctl"/>
+					<Item Name="SPI State Controller Logic.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI State Controller Logic.vi"/>
+					<Item Name="SPI Clock Select.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Clock Select.ctl"/>
+					<Item Name="SPI Clock.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Clock.vi"/>
+					<Item Name="SPI Output Logic.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Output Logic.vi"/>
+					<Item Name="SPI Split Control Lines.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Split Control Lines.vi"/>
+					<Item Name="Rising Edge Trigger.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/Utilities/Rising Edge Trigger.vi"/>
+					<Item Name="SPI Master.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Master.vi"/>
+					<Item Name="Join HDC Bank1 DIO.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/MUXed IO/Join HDC Bank1 DIO.vi"/>
+					<Item Name="Split HDC Bank1 DIO.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/MUXed IO/Split HDC Bank1 DIO.vi"/>
+					<Item Name="DIO 1-bit.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/DIO/DIO 1-bit.vi"/>
+					<Item Name="DIO 4-bit.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/DIO/DIO 4-bit.vi"/>
+					<Item Name="Falling Edge Trigger.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/Utilities/Falling Edge Trigger.vi"/>
+					<Item Name="SPI IRQ.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI IRQ.vi"/>
 				</Item>
 				<Item Name="Build Specifications" Type="Build">
 					<Item Name="SteeringControlSimulation" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -2041,9 +2059,8 @@ AddOutputFilter chunkFilter
 		<Item Name="FPGA_ref.ctl" Type="VI" URL="../Typedef/FPGA_ref.ctl"/>
 		<Item Name="InitaliseODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/InitaliseODrive.vi"/>
 		<Item Name="LogInput.ctl" Type="VI" URL="../Typedef/LogInput.ctl"/>
-		<Item Name="Main.vi" Type="VI" URL="../RealTime/Main.vi"/>
+		<Item Name="main.vi" Type="VI" URL="../RealTime/main.vi"/>
 		<Item Name="Shared resources RT.lvlib" Type="Library" URL="../Shared resoruces/Shared resources RT.lvlib"/>
-		<Item Name="test_main.vi" Type="VI" URL="../../test_main.vi"/>
 		<Item Name="waitForODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/waitForODrive.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
@@ -2105,13 +2122,11 @@ AddOutputFilter chunkFilter
 				<Item Name="Named Mutex.ctl" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/typedefs/Named Mutex.ctl"/>
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
-				<Item Name="ni_emb.dll" Type="Document" URL="/&lt;vilib&gt;/ni_emb.dll"/>
 				<Item Name="NI_Fuzzy_Logic_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Fuzzy Logic/NI_Fuzzy_Logic_API.lvlib"/>
 				<Item Name="NI_Gmath.lvlib" Type="Library" URL="/&lt;vilib&gt;/gmath/NI_Gmath.lvlib"/>
 				<Item Name="NI_Matrix.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/Matrix/NI_Matrix.lvlib"/>
 				<Item Name="NI_PID__prctrl compat.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID__prctrl compat.lvlib"/>
 				<Item Name="NI_PID_pid.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID_pid.lvlib"/>
-				<Item Name="NI_Real-Time Target Support.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI_Real-Time Target Support.lvlib"/>
 				<Item Name="Not A Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Not A Semaphore.vi"/>
 				<Item Name="Obtain Semaphore Reference.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Obtain Semaphore Reference.vi"/>
 				<Item Name="Open File+.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Open File+.vi"/>
@@ -2193,7 +2208,6 @@ AddOutputFilter chunkFilter
 			<Item Name="AutoBikeProject_FPGATarget_FPGASteeringVali_0ktHJXMggMw.lvbitx" Type="Document" URL="../FPGA Bitfiles/AutoBikeProject_FPGATarget_FPGASteeringVali_0ktHJXMggMw.lvbitx"/>
 			<Item Name="Brake.vi" Type="VI" URL="../Sub VIs for RT target/Brake controll/Brake.vi"/>
 			<Item Name="FPGAIMU_FPGATarget_FPGAIMURead_c-b2E2IVPMQ.lvbitx" Type="Document" URL="../RealTime/Sub VIs for RT target/IMU/FPGA Bitfiles/FPGAIMU_FPGATarget_FPGAIMURead_c-b2E2IVPMQ.lvbitx"/>
-			<Item Name="Fuzzy Controller.vi" Type="VI" URL="../RealTime/Controller_Labview/Fuzzy controller/Fuzzy Controller.vi"/>
 			<Item Name="IMUcalc Bias.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUcalc Bias.vi"/>
 			<Item Name="IMUconfig.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUconfig.vi"/>
 			<Item Name="IMUrollpitch.vi" Type="VI" URL="../Sub VIs for RT target/IMU/IMUrollpitch.vi"/>
@@ -2205,9 +2219,6 @@ AddOutputFilter chunkFilter
 			<Item Name="Serial Close IMU.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Serial Close IMU.vi"/>
 			<Item Name="Serial Init IMU.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Serial Init IMU.vi"/>
 			<Item Name="Serial Read IMU.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/IMU/Serial Read IMU.vi"/>
-			<Item Name="UWB Extract Position.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Extract Position.vi"/>
-			<Item Name="UWB Serial Read.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Serial Read.vi"/>
-			<Item Name="UWB Serial Write.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/UWB/UWB Serial Write.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="BicycleStartup" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
@@ -2243,10 +2254,10 @@ AddOutputFilter chunkFilter
 				<Property Name="Source[1].itemID" Type="Ref">/NI-roboRIO-030cbd6b/Controllers and typedef/Knob control.ctl</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/NI-roboRIO-030cbd6b/Main.vi</Property>
+				<Property Name="Source[2].itemID" Type="Ref"></Property>
 				<Property Name="Source[2].type" Type="Str">VI</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/NI-roboRIO-030cbd6b/test_main.vi</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/NI-roboRIO-030cbd6b/main.vi</Property>
 				<Property Name="Source[3].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[3].type" Type="Str">VI</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
