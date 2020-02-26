@@ -1918,24 +1918,6 @@ AddOutputFilter chunkFilter
 						<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 						<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 					</Item>
-					<Item Name="Start Boolean.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/Utilities/Start Boolean.ctl"/>
-					<Item Name="SPI Frame Length.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Frame Length.ctl"/>
-					<Item Name="SPI MISO.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI MISO.vi"/>
-					<Item Name="SPI MOSI.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI MOSI.vi"/>
-					<Item Name="SPI States.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI States.ctl"/>
-					<Item Name="SPI State Controller Logic.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI State Controller Logic.vi"/>
-					<Item Name="SPI Clock Select.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Clock Select.ctl"/>
-					<Item Name="SPI Clock.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Clock.vi"/>
-					<Item Name="SPI Output Logic.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Output Logic.vi"/>
-					<Item Name="SPI Split Control Lines.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Split Control Lines.vi"/>
-					<Item Name="Rising Edge Trigger.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/Utilities/Rising Edge Trigger.vi"/>
-					<Item Name="SPI Master.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Master.vi"/>
-					<Item Name="Join HDC Bank1 DIO.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/MUXed IO/Join HDC Bank1 DIO.vi"/>
-					<Item Name="Split HDC Bank1 DIO.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/MUXed IO/Split HDC Bank1 DIO.vi"/>
-					<Item Name="DIO 1-bit.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/DIO/DIO 1-bit.vi"/>
-					<Item Name="DIO 4-bit.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/DIO/DIO 4-bit.vi"/>
-					<Item Name="Falling Edge Trigger.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/Utilities/Falling Edge Trigger.vi"/>
-					<Item Name="SPI IRQ.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI IRQ.vi"/>
 				</Item>
 				<Item Name="Build Specifications" Type="Build">
 					<Item Name="SteeringControlSimulation" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -2059,7 +2041,7 @@ AddOutputFilter chunkFilter
 		<Item Name="FPGA_ref.ctl" Type="VI" URL="../Typedef/FPGA_ref.ctl"/>
 		<Item Name="InitaliseODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/InitaliseODrive.vi"/>
 		<Item Name="LogInput.ctl" Type="VI" URL="../Typedef/LogInput.ctl"/>
-		<Item Name="main.vi" Type="VI" URL="../RealTime/main.vi"/>
+		<Item Name="Main.vi" Type="VI" URL="../RealTime/Main.vi"/>
 		<Item Name="Shared resources RT.lvlib" Type="Library" URL="../Shared resoruces/Shared resources RT.lvlib"/>
 		<Item Name="waitForODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/waitForODrive.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -2257,7 +2239,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Source[2].itemID" Type="Ref"></Property>
 				<Property Name="Source[2].type" Type="Str">VI</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/NI-roboRIO-030cbd6b/main.vi</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/NI-roboRIO-030cbd6b/Main.vi</Property>
 				<Property Name="Source[3].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[3].type" Type="Str">VI</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
