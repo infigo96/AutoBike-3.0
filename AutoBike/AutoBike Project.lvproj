@@ -1918,24 +1918,6 @@ AddOutputFilter chunkFilter
 						<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 						<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 					</Item>
-					<Item Name="Start Boolean.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/Utilities/Start Boolean.ctl"/>
-					<Item Name="Split HDC Bank1 DIO.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/MUXed IO/Split HDC Bank1 DIO.vi"/>
-					<Item Name="DIO 4-bit.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/DIO/DIO 4-bit.vi"/>
-					<Item Name="DIO 1-bit.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/DIO/DIO 1-bit.vi"/>
-					<Item Name="Join HDC Bank1 DIO.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/MUXed IO/Join HDC Bank1 DIO.vi"/>
-					<Item Name="SPI Master.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Master.vi"/>
-					<Item Name="SPI States.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI States.ctl"/>
-					<Item Name="SPI Frame Length.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Frame Length.ctl"/>
-					<Item Name="Rising Edge Trigger.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/Utilities/Rising Edge Trigger.vi"/>
-					<Item Name="SPI Split Control Lines.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Split Control Lines.vi"/>
-					<Item Name="SPI Clock Select.ctl" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Clock Select.ctl"/>
-					<Item Name="SPI Output Logic.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Output Logic.vi"/>
-					<Item Name="SPI Clock.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI Clock.vi"/>
-					<Item Name="SPI State Controller Logic.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI State Controller Logic.vi"/>
-					<Item Name="SPI MOSI.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI MOSI.vi"/>
-					<Item Name="SPI MISO.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI MISO.vi"/>
-					<Item Name="SPI IRQ.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/SPI/SPI IRQ.vi"/>
-					<Item Name="Falling Edge Trigger.vi" Type="VI" URL="../FPGA/Sub VIs for FPGA/SubVIs needed for the customize FPGA VI/Utilities/Falling Edge Trigger.vi"/>
 				</Item>
 				<Item Name="Build Specifications" Type="Build">
 					<Item Name="SteeringControlSimulation" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -2238,7 +2220,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{049A4002-82CB-4C7C-8523-29F7C973DC23}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">51</Property>
+				<Property Name="Bld_version.build" Type="Int">52</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
