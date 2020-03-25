@@ -12,21 +12,31 @@ clc;
 close all;
 %% Initialize variables.
 %filename = 'C:\Users\hampu\Downloads\bikeRuns\bikeRuns\logData57.csv';
-filename = 'D:\Logfile\logData149.csv';
+filename = 'D:\Logfile\logData162.csv';
 delimiter = ',';
 
-%% Format for each line of text:
-%   column1: double (%f)
-%	column2: double (%f)
-%   column3: double (%f)
-%	column4: double (%f)
-%   column5: double (%f)
-%	column6: double (%f)
-%   column7: double (%f)
-%	column8: double (%f)
-%   column9: double (%f)
-%	column10: double (%f)
-%   column11: double (%f)
+%% Format for each line of text: (1 indexed, labview is 0 indexed)
+%   c1: Time
+%	c2: Distance step (Not Tested)
+%   c3: Odrive propulsion motor velocity 
+%	c4: Odrive Steering position. 
+%   c5: ODrive error flags
+%	c6: Velocity KM/h (Bales on Odrive) 
+%   c7: Yaw
+%	c8: Pitch
+%   c9: Roll
+%	c10: Steering setpoint (Output Balance PID)
+%   c11: Lean Setpoint (input to balance PID)
+%	c12: Remote Setpoint
+%   c13: Nav mode
+%	c14: Yaw zeroed/Filtered
+%   c15: Path Yaw
+%	c16: Bike GPS heading (Not working, and not used)
+%   c17: Bike X
+%	c18: Bike Y
+%   c19: Path X 
+%	c20: Path Y
+%   c21: Lateral error
 % For more information, see the TEXTSCAN documentation.
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%*s%*s%*s%[^\n\r]';
 
@@ -60,8 +70,8 @@ data = [dataArray{1:end-1}];
 clearvars filename delimiter formatSpec fileID dtaArray ans;
 
 %%
-data(:,14) = -data(:,14);
-data(:,7) = -data(:,7);
+%data(:,14) = -data(:,14);
+%data(:,7) = -data(:,7);
 data(:,10) = -data(:,10);
 data(:,4) = -data(:,4);
 data(:,11) = -data(:,11);
@@ -76,12 +86,12 @@ for i = 2:length(data(:,j))
         data(i,j) = data(i-1,j);
     end
 end
-j = 7;
-for i = 2:length(data(:,j))
-    if(abs(data(i,j) - data(i-1,j)) > 2)
-        data(i,j) = data(i-1,j);
-    end
-end
+% j = 7;
+% for i = 2:length(data(:,j))
+%     if(abs(data(i,j) - data(i-1,j)) > 2)
+%         data(i,j) = data(i-1,j);
+%     end
+% end
 for j = 17:18
     for i = 2:length(data(:,j))
         if(abs(data(i,j) - data(i-1,j)) > 2)
@@ -127,26 +137,26 @@ end
 % 
 % ylim([-10 10]);
 %%
-data(:,7) = data(:,7)-15;
-data = data(84000:85500,:);
-
-subplot(1,2,2)
-plot(data(:,1),data(:,[9 11]),'DisplayName','data')
-set(gca,'FontSize',18) % Creates an axes and sets its FontSize to 18
-legend('Lean angle', 'Lean setpoint');%,' 7 Yaw angle')
-%9 10 11 'lean angle (degrees)', 'steering setpoint (degrees)','lean setpoint (degrees)',
-xlabel('Time (s)');
-ylabel('Angle (degree)');
-
-subplot(1,2,1);
-plot(data(:,1),data(:,[14 15]),'DisplayName','data')
-set(gca,'FontSize',18) % Creates an axes and sets its FontSize to 18
-legend('Yaw angle','Target heading');%,' 7 Yaw angle')
-%9 10 11 'lean angle (degrees)', 'steering setpoint (degrees)','lean setpoint (degrees)',
-xlabel('Time (s)');
-ylabel('Angle (degree)');
-
-ylim([-50 50]);
+% data(:,7) = data(:,7)-15;
+% data = data(84000:85500,:);
+% 
+% subplot(1,2,2)
+% plot(data(:,1),data(:,[9 11]),'DisplayName','data')
+% set(gca,'FontSize',18) % Creates an axes and sets its FontSize to 18
+% legend('Lean angle', 'Lean setpoint');%,' 7 Yaw angle')
+% %9 10 11 'lean angle (degrees)', 'steering setpoint (degrees)','lean setpoint (degrees)',
+% xlabel('Time (s)');
+% ylabel('Angle (degree)');
+% 
+% subplot(1,2,1);
+% plot(data(:,1),data(:,[14 15]),'DisplayName','data')
+% set(gca,'FontSize',18) % Creates an axes and sets its FontSize to 18
+% legend('Yaw angle','Target heading');%,' 7 Yaw angle')
+% %9 10 11 'lean angle (degrees)', 'steering setpoint (degrees)','lean setpoint (degrees)',
+% xlabel('Time (s)');
+% ylabel('Angle (degree)');
+% 
+% ylim([-50 50]);
 
 %%
 % data(:,14) = data(:,14) + -20;
@@ -171,8 +181,13 @@ ylim([-50 50]);
 % y = cumtrapz(data(22:end,1),data(22:end,6).*cos(deg2rad(data(22:end,14))))/3.6;
 % x = cumtrapz(data(22:end,1),data(22:end,6).*sin(deg2rad(data(22:end,14))))/3.6;
 % 
-% plot(data(:,17),data(:,18))
-% hold on
+ hold on
+ plot(data(:,17),data(:,18))
+ hold on
+ plot(data(:,19),data(:,20))
+ legend('travel','path');
+ xlim([-75 75])
+ ylim([0 150])
 % plot(x,y)
 % plot(xh,yh);
 % xlabel('X (m)')
