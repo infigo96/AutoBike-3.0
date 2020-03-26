@@ -12,7 +12,7 @@ clc;
 close all;
 %% Initialize variables.
 %filename = 'C:\Users\hampu\Downloads\bikeRuns\bikeRuns\logData57.csv';
-filename = 'D:\Logfile\logData162.csv';
+filename = 'D:\Logfile\logData177.csv';
 delimiter = ',';
 
 %% Format for each line of text: (1 indexed, labview is 0 indexed)
@@ -31,7 +31,7 @@ delimiter = ',';
 %   c13: Nav mode
 %	c14: Yaw zeroed/Filtered
 %   c15: Path Yaw
-%	c16: Bike GPS heading (Not working, and not used)
+%	c16: Path index after -1 is 0 first
 %   c17: Bike X
 %	c18: Bike Y
 %   c19: Path X 
@@ -100,8 +100,8 @@ for j = 17:18
     end
 end
 %%
-% plot(data(:,1),data(:,[6 9 10 11 13 14 15]),'DisplayName','data')
-% legend('velocity (km/h)','lean angle (degrees)','steering setpoint (degrees)','lean setpoint (degrees)','nav mode on', 'yaw angle mod', 'path heading')
+%  plot(data(:,1),data(:,[6 9 10 11 13 14 21]),'DisplayName','data')
+%  legend('velocity (km/h)','lean angle (degrees)','steering setpoint (degrees)','lean setpoint (degrees)','nav mode on', 'yaw angle mod', 'lateral error')
 % subplot(3,1,1);
 % plot(data(:,1),data(:,9),'DisplayName','data')
 % legend('Lean angle');%,'lean setpoint (degrees)')
