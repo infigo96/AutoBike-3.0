@@ -12,16 +12,16 @@ clc;
 close all;
 %% Initialize variables.
 %filename = 'C:\Users\hampu\Downloads\bikeRuns\bikeRuns\logData57.csv';
-filename = 'D:\Logfile\logData177.csv';
+filename = 'D:\Logfile\logData192.csv';
 delimiter = ',';
 
 %% Format for each line of text: (1 indexed, labview is 0 indexed)
 %   c1: Time
-%	c2: Distance step (Not Tested)
-%   c3: Odrive propulsion motor velocity 
-%	c4: Odrive Steering position. 
-%   c5: ODrive error flags
-%	c6: Velocity KM/h (Bales on Odrive) 
+%	c2: Odrive propulsion motor velocity km/h
+%   c3: 
+%	c4: 
+%   c5: 
+%	c6: 
 %   c7: Yaw
 %	c8: Pitch
 %   c9: Roll
@@ -38,7 +38,7 @@ delimiter = ',';
 %	c20: Path Y
 %   c21: Lateral error
 % For more information, see the TEXTSCAN documentation.
-formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%*s%*s%*s%[^\n\r]';
+formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%*s%*s%*s%[^\n\r]';
 
 %% Open the text file.
 fileID = fopen(filename,'r');
@@ -100,8 +100,8 @@ for j = 17:18
     end
 end
 %%
-%  plot(data(:,1),data(:,[6 9 10 11 13 14 21]),'DisplayName','data')
-%  legend('velocity (km/h)','lean angle (degrees)','steering setpoint (degrees)','lean setpoint (degrees)','nav mode on', 'yaw angle mod', 'lateral error')
+plot(data(:,1),data(:,[6 9 10 11 13 14 21]),'DisplayName','data')
+legend('velocity (km/h)','lean angle (degrees)','steering setpoint (degrees)','lean setpoint (degrees)','nav mode on', 'yaw angle mod', 'lateral error')
 % subplot(3,1,1);
 % plot(data(:,1),data(:,9),'DisplayName','data')
 % legend('Lean angle');%,'lean setpoint (degrees)')
@@ -181,13 +181,13 @@ end
 % y = cumtrapz(data(22:end,1),data(22:end,6).*cos(deg2rad(data(22:end,14))))/3.6;
 % x = cumtrapz(data(22:end,1),data(22:end,6).*sin(deg2rad(data(22:end,14))))/3.6;
 % 
- hold on
- plot(data(:,17),data(:,18))
- hold on
- plot(data(:,19),data(:,20))
- legend('travel','path');
- xlim([-75 75])
- ylim([0 150])
+%  hold on
+%  plot(data(:,17),data(:,18))
+%  hold on
+%  plot(data(:,19),data(:,20))
+%  legend('travel','path');
+%  xlim([-75 75])
+%  ylim([0 150])
 % plot(x,y)
 % plot(xh,yh);
 % xlabel('X (m)')
