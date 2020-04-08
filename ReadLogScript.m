@@ -18,25 +18,17 @@ delimiter = ',';
 %% Format for each line of text: (1 indexed, labview is 0 indexed)
 %   c1: Time
 %	c2: Odrive propulsion motor velocity km/h
-%   c3: 
-%	c4: 
-%   c5: 
-%	c6: 
-%   c7: Yaw
-%	c8: Pitch
-%   c9: Roll
-%	c10: Steering setpoint (Output Balance PID)
-%   c11: Lean Setpoint (input to balance PID)
-%	c12: Remote Setpoint
-%   c13: Nav mode
-%	c14: Yaw zeroed/Filtered
-%   c15: Path Yaw
-%	c16: Path index after -1 is 0 first
-%   c17: Bike X
-%	c18: Bike Y
-%   c19: Path X 
-%	c20: Path Y
-%   c21: Lateral error
+%   c3: Roll
+%	c4: Yaw Filtered
+%   c5: Steering setpoint (Output Balance PID)
+%	c6: Lean Setpoint (input to balance PID)
+%   c7: Remote Setpoint
+%	c8: Bike X
+%   c9: Bike Y
+%	c10: Path Yaw
+%   c11: Path X 
+%	c12: Path Y
+%   c13: Lateral error
 % For more information, see the TEXTSCAN documentation.
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%*s%*s%*s%[^\n\r]';
 
