@@ -2,6 +2,7 @@
 <Project Type="Project" LVVersion="16008000">
 	<Property Name="varPersistentID:{0ABD3B80-0790-42D4-8EFC-6D15282D2D66}" Type="Ref">/NI-roboRIO-030cbd6b/Shared resources RT.lvlib/Stop!</Property>
 	<Property Name="varPersistentID:{359003A4-0797-45C4-B745-63379BFCE32E}" Type="Ref">/NI-roboRIO-030cbd6b/Shared resources RT.lvlib/killswitch</Property>
+	<Property Name="varPersistentID:{53261EEE-2227-4A7E-8269-6F1C2DDB3B6F}" Type="Ref">/NI-roboRIO-030cbd6b/Shared resources RT.lvlib/DataFilter</Property>
 	<Property Name="varPersistentID:{70AA5115-FD24-497A-AB22-66AFB914EE5C}" Type="Ref">/NI-roboRIO-030cbd6b/Shared resources RT.lvlib/Remote Control Data</Property>
 	<Property Name="varPersistentID:{9ACB64B1-B78A-4A02-89CB-D1BE2C527308}" Type="Ref">/NI-roboRIO-030cbd6b/Shared resources RT.lvlib/UWB data</Property>
 	<Property Name="varPersistentID:{FC0E4D18-21C8-4659-8F7A-73265FF46430}" Type="Ref">/NI-roboRIO-030cbd6b/Shared resources RT.lvlib/Position data</Property>
@@ -2040,6 +2041,7 @@ AddOutputFilter chunkFilter
 			</Item>
 		</Item>
 		<Item Name="encoder2mps.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/encoder2mps.vi"/>
+		<Item Name="Filter Data.ctl" Type="VI" URL="../Typedef/Filter Data.ctl"/>
 		<Item Name="FPGA_ref.ctl" Type="VI" URL="../Typedef/FPGA_ref.ctl"/>
 		<Item Name="InitaliseODrive.vi" Type="VI" URL="../RealTime/Sub VIs for RT target/InitaliseODrive.vi"/>
 		<Item Name="LogInput.ctl" Type="VI" URL="../Typedef/LogInput.ctl"/>
