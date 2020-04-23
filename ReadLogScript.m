@@ -12,7 +12,7 @@ clc;
 close all;
 %% Initialize variables.
 %filename = 'C:\Users\hampu\Downloads\bikeRuns\bikeRuns\logData57.csv';
-filename = 'D:\Logfile\logData192.csv';
+filename = 'D:\Log2\LogData7.csv';
 delimiter = ',';
 
 %% Format for each line of text: (1 indexed, labview is 0 indexed)
@@ -30,7 +30,7 @@ delimiter = ',';
 %	c12: Path Y
 %   c13: Lateral error
 % For more information, see the TEXTSCAN documentation.
-formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%*s%*s%*s%[^\n\r]';
+formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%*s%*s%*s%[^\n\r]';
 
 %% Open the text file.
 fileID = fopen(filename,'r');
@@ -64,15 +64,16 @@ clearvars filename delimiter formatSpec fileID dtaArray ans;
 %%
 %data(:,14) = -data(:,14);
 %data(:,7) = -data(:,7);
-data(:,10) = -data(:,10);
-data(:,4) = -data(:,4);
-data(:,11) = -data(:,11);
+
+ data(:,5) = -data(:,5);
+% data(:,4) = -data(:,4);
+% data(:,11) = -data(:,11);
 
 
 data(:,1) = data(:,1)/1000;
 data(:,1) = data(:,1) -data(1,1);
 %% Filter spikes
-j = 9;
+j = 3;
 for i = 2:length(data(:,j))
     if(abs(data(i,j) - data(i-1,j)) > 2)
         data(i,j) = data(i-1,j);
@@ -84,16 +85,16 @@ end
 %         data(i,j) = data(i-1,j);
 %     end
 % end
-for j = 17:18
-    for i = 2:length(data(:,j))
-        if(abs(data(i,j) - data(i-1,j)) > 2)
-            data(i,j) = data(i-1,j);
-        end
-    end
-end
+% for j = 17:18
+%     for i = 2:length(data(:,j))
+%         if(abs(data(i,j) - data(i-1,j)) > 2)
+%             data(i,j) = data(i-1,j);
+%         end
+%     end
+% end
 %%
-plot(data(:,1),data(:,[6 9 10 11 13 14 21]),'DisplayName','data')
-legend('velocity (km/h)','lean angle (degrees)','steering setpoint (degrees)','lean setpoint (degrees)','nav mode on', 'yaw angle mod', 'lateral error')
+plot(data(:,1),data(:,[4 13 8 9 10 6]),'DisplayName','data')
+legend('yaw', 'lateral error','x', 'y','path yaw','lean setpoint')
 % subplot(3,1,1);
 % plot(data(:,1),data(:,9),'DisplayName','data')
 % legend('Lean angle');%,'lean setpoint (degrees)')
@@ -173,10 +174,10 @@ legend('velocity (km/h)','lean angle (degrees)','steering setpoint (degrees)','l
 % y = cumtrapz(data(22:end,1),data(22:end,6).*cos(deg2rad(data(22:end,14))))/3.6;
 % x = cumtrapz(data(22:end,1),data(22:end,6).*sin(deg2rad(data(22:end,14))))/3.6;
 % 
+%  figure;
+%  plot(data(:,8),data(:,9))
 %  hold on
-%  plot(data(:,17),data(:,18))
-%  hold on
-%  plot(data(:,19),data(:,20))
+%  plot(data(:,11),data(:,12))
 %  legend('travel','path');
 %  xlim([-75 75])
 %  ylim([0 150])
