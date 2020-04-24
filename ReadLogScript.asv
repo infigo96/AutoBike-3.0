@@ -66,7 +66,7 @@ clearvars filename delimiter formatSpec fileID dtaArray ans;
 data(:,6) = -data(:,6);
 
  data(:,5) = -data(:,5);
-data(:,4) = wrapTo180((data(:,4))-102);
+data(:,4) = wrapTo180((data(:,4))-110);
 % data(:,11) = -data(:,11);
 
 
@@ -87,32 +87,23 @@ end
 % end
 for j = 8:9
     temp = [0 ;diff(data(:,j))];
-    holdT = 0;
     hold = temp(1);
-    temp2 = data(:,4);
-    hold2 = temp2(i);
+    temp2 = data(:,3);
+    hold2 = temp
     for i = 2:length(temp)
-        if(isnan(temp(i)))
+        if(isnan(temp(i)) == 1)
             temp(i) = 0;
         elseif(temp(i) == 0)
             temp(i) = hold;
-           
-            temp2(i) = hold2;
             
         else
-            hold = holdT + temp(i);
-            holdT = temp(i);
-            temp(i) = hold;
-            
-            
-            hold2 = temp2(i);
+            hold = temp(i);
         end
     end
     data(:,j+6) = temp;
 end
-data(:,4) = temp2;
-data(:,16) = (rad2deg(atan2(data(:,15),data(:,14))));
-data(:,17) = (0.7*data(:,4) + 0.3*data(:,16));
+data(:,16) = movmean(rad2deg(atan2(data(:,15),data(:,14))),30);
+data(:,17) = (0.6*data(:,3) + 0.4*data(:,16));
 %%
 % plot(data(:,1),data(:,[4 5 8 9 10 6 2]),'DisplayName','data')
 % legend('yaw', 'roll','x', 'y','path yaw','lean setpoint','velocoa')
@@ -140,8 +131,8 @@ data(:,17) = (0.7*data(:,4) + 0.3*data(:,16));
 % set(gca,'FontSize',18) % Creates an axes and sets its FontSize to 18
 
 %%
-figure;
-plot(data(:,1),data(:,[4 17 10 9]),'DisplayName','data')
+
+plot(data(:,1),data(:,[4 16 17]),'DisplayName','data')
 legend('yaw', 'gps','complementary')
 %%
 % data(:,7) = data(:,7)-15;
