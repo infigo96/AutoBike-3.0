@@ -12,12 +12,12 @@ clc;
 %close all;
 %% Initialize variables.
 %filename = 'C:\Users\hampu\Downloads\bikeRuns\bikeRuns\logData57.csv';
-filename = 'D:\Log2\LogData58.csv';
+filename = 'D:\Log2\LogData59.csv';
 delimiter = ',';
 
 %% Format for each line of text: (1 indexed, labview is 0 indexed)
 %   c1: Time
-%	c2: Odrive propulsion motor velocity km/h
+%	c2: Odrive propulsion motor velocity m/s
 %   c3: Roll
 %	c4: Yaw Filtered
 %   c5: Steering setpoint (Output Balance PID)
